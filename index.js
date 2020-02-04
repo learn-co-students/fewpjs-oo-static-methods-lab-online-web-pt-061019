@@ -26,5 +26,6 @@ class Formatter {
       }
     }
     return stringResult.join(" ");
+    // testing
   }
 }
