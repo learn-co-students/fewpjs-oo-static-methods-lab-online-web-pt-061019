@@ -5,10 +5,18 @@ class Formatter {
   }
 
   static sanitize(string) {
-    return string.replace(/[^A-Za-z0-9-']+/g, '');
+    return string.replace(/[^- ''']+/g, '');
   }
 
-  static titleize() {
-    return string.
+  static titleize(string) {
+    let words = string.split(' ')
+    let firstWord = words[0]
+    let shout = firstWord.toUpperCase()
+    let newWords = words.unshift(shout)
+
+    let newString = newWords.join(' ')
+
+    return newString
+
   }
 }
